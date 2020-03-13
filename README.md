@@ -1,5 +1,25 @@
-https://github.com/zmartzone/mod_auth_openidc was copied to https://github.com/dematic-spe/mod_auth_openidc
-Build steps
+# History 
+[zsmartzone Created a OpenID authentication module for apache although made the windows binaries support only](https://github.com/zmartzone/mod_auth_openidc )
+[dematic-spe Forked and created a simple build system to build the module](https://github.com/dematic-spe/mod_auth_openidc)
+[callumcarmicheal Just modified some code and fixed some errors stopping from building](https://github.com/CallumCarmicheal/mod_auth_openidc with code fixes to fix compiling.)
+
+# Download binary
+The binary was compiled using the following environment settings
+Apache	httpd-2.4.41-win32-VS16.zip
+		httpd-2.4.41-win64-VS16.zip
+Php		php-7.3.10-Win32-VC15-x64.zip
+		php-7.3.10-Win32-VC15-x86.zip
+Using Visual Studio 2019
+
+Check the releases section for a windows build.
+
+# Building prereq's.
+1) Modify build.cmd and set the Visual Studio vcvars location
+2) Modify bootstrap-windows.cmd and set the Visual Studio vcvars location
+3) Read [_Build_README.md](_Build_README.md) on build instructions.
+
+
+# Build steps
 1) bootstrap-windows.cmd
 2) build.cmd -  the output is in the target folder.
   The output is two zip files, one for x86 and one for x64.

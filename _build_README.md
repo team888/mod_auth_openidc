@@ -32,6 +32,7 @@ Step 1) PS D:\spe\github\vcpkg> .\bootstrap-vcpkg.bat
 		pkg-config
 		and if you want Redis support:
 		hiredis (>=0.9.0) (Redis client for C)
+		
 Step 2)   .\vcpkg search apr
 Step 3)   .\vcpkg install apr:x64-windows
 Step 3.1) .\vcpkg install apr:x32-windows
@@ -58,4 +59,4 @@ Step 8) d:\spe\github git clone https://github.com/redis/hiredis
 
 
 
-#A big thank you to Microsoft and the vcpkg project for making this easier.
+# A big thank you to Microsoft and the vcpkg project for making this easier.

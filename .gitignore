@@ -21,3 +21,8 @@
 /.autotools
 /target
 /.vscode/
+
+# build files
+/x64
+/win32
+/.vscode

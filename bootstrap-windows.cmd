@@ -3,7 +3,7 @@
 
 git submodule update --init --recursive
 
-call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+call "I:\Applications\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
 
 @echo cd to vcpkg
 cd vcpkg
