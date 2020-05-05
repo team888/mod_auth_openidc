@@ -12,6 +12,7 @@ function download($URL, $Destination){
 
 	if(!(Test-Path $Destination)){
 		Write-Host "Downloading $File to $Destination";
+		[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12
 		(New-Object Net.WebClient).DownloadFile($URL,$Destination);
 		
 		$lNewName = " $((Get-Item $Destination ).DirectoryName)\$((Get-Item $Destination ).Basename)"
@@ -30,6 +31,5 @@ if(!(Test-Path $targetFolder)){
 	Write-Host "Folder $targetFolder already exists"
 }
 
-download -URL 'https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.41-win64-VS16.zip' -Destination "$PSScriptRoot\target\httpd-2.4.41-win64-VS16.zip"
-download -URL 'https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.41-win32-VS16.zip' -Destination "$PSScriptRoot\target\httpd-2.4.41-win32-VS16.zip"
-
+download -URL 'https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.43-win64-VS16.zip' -Destination "$PSScriptRoot\target\httpd-2.4.43-win64-VS16.zip"
+download -URL 'https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.43-win32-VS16.zip' -Destination "$PSScriptRoot\target\httpd-2.4.43-win32-VS16.zip"

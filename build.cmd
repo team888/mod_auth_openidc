@@ -1,9 +1,11 @@
 call "I:\Applications\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+REM call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
 
 msbuild.exe "cjose/cjose.vcxproj" /p:Configuration=Release /p:Platform="x64"
 msbuild.exe "mod_auth_openidc.vcxproj" /p:Configuration=Release /p:Platform="x64"
 
 call "I:\Applications\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
+REM call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars32.bat"
 msbuild.exe "cjose/cjose.vcxproj" /p:Configuration=Release /p:Platform="win32"
 msbuild.exe "mod_auth_openidc.vcxproj" /p:Configuration=Release /p:Platform="win32"
 
